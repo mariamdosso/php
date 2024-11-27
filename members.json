@@ -1,0 +1,20 @@
+[
+    {
+        "nom": "Vladimir Winters",
+        "prenom": "Jimenez",
+        "date": "2017-09-12",
+        "cout": 3000,
+        "montant_payer": 8000,
+        "genre": "m",
+        "solder": true
+    },
+    {
+        "nom": "Justin Zamora",
+        "prenom": "Finley",
+        "date": "1971-04-07",
+        "cout": 5000,
+        "montant_payer": 5000,
+        "genre": "f",
+        "solder": true
+    }
+]

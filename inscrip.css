@@ -1,0 +1,14 @@
+table{
+    width: 800px;
+ border-color: blue;
+ text-align: center;
+}
+.st {
+    color: rgb(241, 233, 225);
+    font-size: 20px;
+    background-color: rgb(240, 83, 48);
+    border-radius: 3px;
+}
+.container {
+    position: relative;
+  }

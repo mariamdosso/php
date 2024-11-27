@@ -1,0 +1,68 @@
+body {
+    background-color: #CFFAFE;
+    font-family: "Roboto" sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid grey;
+    background-color: #D4D4D4;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-left: 7rem;
+    border-radius: 55px 0px 55px 0px;
+    max-width: 800px;
+    position: relative;
+    left: 300px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 100px;
+    /* Moves the element 20px down */
+    left: -500px;
+    /* Moves the element 20px to the left */
+}
+
+.button-color {
+    background-color: #F5F5F5;
+    color: black;
+    border-radius: 2rem 2rem 2rem 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.mail {
+    position: relative;
+    left: 100px;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    /* Fusionne les bordures entre les cellules */
+    border: 2px solid black;
+    /* Bordure autour du tableau */
+}
+
+th,
+td {
+    border: 1px solid black;
+    /* Bordure autour de chaque cellule */
+    padding: 8px;
+    text-align: left;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,38 @@
+[
+    {
+        "nom": "Aiko Weaver",
+        "prenom": "Whitley",
+        "date": "2017-09-16",
+        "cout": 3000,
+        "montant_payer": 634,
+        "genre": "f",
+        "solder": false
+    },
+    {
+        "nom": "Aiko Weaver",
+        "prenom": "Whitley",
+        "date": "2017-09-16",
+        "cout": 3000,
+        "montant_payer": 634,
+        "genre": "f",
+        "solder": false
+    },
+    {
+        "nom": "Aiko Weaver",
+        "prenom": "Whitley",
+        "date": "2017-09-16",
+        "cout": 3000,
+        "montant_payer": 634,
+        "genre": "f",
+        "solder": false
+    },
+    {
+        "nom": "Imelda Hale",
+        "prenom": "King",
+        "date": "2019-01-14",
+        "cout": 5000,
+        "montant_payer": 822,
+        "genre": "m",
+        "solder": false
+    }
+]
