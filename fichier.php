@@ -1,10 +1,18 @@
 <?php
 
-$file = 'members.json';
+$file = 'database/members.json'; 
+$file2 = 'test.txt';
 $members = [];
+$lastname_list = "";
 if (file_exists($file)) {
     $data = file_get_contents($file);
     $members = json_decode($data, true) ?? [];
+}else {
+    mkdir("database");
+}
+if (file_exists($file2)) {
+    $lastname_list = file_get_contents($file2);
+    echo "<pre>". ($lastname_list). "</pre>";
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nom'], $_POST['prenom'], $_POST['date'], $_POST['cout'], $_POST['montant_payer'], $_POST['genre'])) {
@@ -18,6 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nom'], $_POST['prenom
         'genre' => htmlspecialchars($_POST['genre']),
         'solder' => ((int) $_POST['montant_payer'] >= (int) $_POST['cout'])
     ];
+        $lastname_list.= $_POST['nom']."\n\n";
+    file_put_contents($file2, $_POST['nom'], FILE_APPEND);
+   
 
     $members[] = $new_member;
 
@@ -42,6 +53,20 @@ if (isset($_GET['empty_list']) && $_GET['empty_list'] === 'true') {
     header("Location: " . $_SERVER['PHP_SELF']);
     exit;
 }
+if (isset($_GET["empty_listing"]) && $_GET["empty_listing"] == true) {
+    echo "is ok";
+    if(file_exists($file)){
+        unlink($file);
+        rmdir("database");
+        header("Location:http://localhost/PROJET_TEXT/fichier.php");
+        exit;
+    }
+    
+
+}
+
+
+
 ?>
 
 
@@ -128,7 +153,7 @@ if (isset($_GET['empty_list']) && $_GET['empty_list'] === 'true') {
             </div>
             <div class="flex_row justify-content-end gap-1">
                 <button type="submit" class="btn">Filtrer</button>
-                <a href="challenge.php?empty_list=true" class="btn lien-decoration">Vider le tableau</a>
+                <a href="fichier.php?empty_listing=true" class="btn lien-decoration">Vider le tableau</a>
             </div>
             <div class="grid grid-col-2 gap-1">
 
